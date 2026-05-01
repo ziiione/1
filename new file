@@ -1,0 +1,8 @@
+// there is the setup for the first time
+start windowsdefender://threatsettings
+
+Set-MpPreference -DisableRealtimeMonitoring $true
+
+
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" -Name "SmartScreenEnabled" -Value "Off"
+
